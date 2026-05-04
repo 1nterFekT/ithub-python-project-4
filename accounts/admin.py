@@ -1,3 +1,27 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin, GroupAdmin as BaseGroupAdmin
+from django.contrib.auth.models import User, Group
 
-# Register your models here.
+from unfold.admin import ModelAdmin
+
+from accounts import models, forms
+
+
+# admin.site.unregister(User)
+admin.site.unregister(Group)
+
+
+@admin.register(models.User)
+class UserAdmin(BaseUserAdmin, ModelAdmin):
+    form = forms.UserChangeForm
+    add_form = forms.UserCreationForm
+    change_password_form = forms.AdminPasswordChangeForm
+
+    list_display = ['username', 'first_name', 'last_name', 'middle_name', 'is_staff']
+    list_filter = ['is_staff']
+    search_fields = ['username', 'first_name', 'last_name']
+
+
+@admin.register(Group)
+class GroupAdmin(BaseGroupAdmin, ModelAdmin):
+    pass

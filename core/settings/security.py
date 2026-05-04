@@ -1,9 +1,10 @@
 from core.settings.get_env import env
 
 SECRET_KEY = env("SECRET_KEY")
-ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]"]
 
-if env("PYTHON_ENVIRONMENT"):
+if env("PYTHON_ENVIRONMENT") == "PRODUCTION":
+    ALLOWED_HOSTS = ["localhost", "127.0.0.1", "[::1]"]
+
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
