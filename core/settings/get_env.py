@@ -9,5 +9,5 @@ env = Env(
 
 Env.read_env(BASE_DIR / ".env", overwrite=True)
 
-if env("PYTHON_ENVIRONMENT"):
+if env("PYTHON_ENVIRONMENT" == 'PRODUCTION'):
     Env.read_env(BASE_DIR / ".env.production", overwrite=True)
