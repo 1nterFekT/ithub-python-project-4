@@ -6,7 +6,7 @@ def get_database_settings() -> dict[str, str]:
     if env("PYTHON_ENVIRONMENT") != "PRODUCTION":
         return {
             "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "students.sqlite3",
+            "NAME": BASE_DIR / "database.sqlite3",
         }
 
     return {
