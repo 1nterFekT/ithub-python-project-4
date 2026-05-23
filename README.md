@@ -1,5 +1,15 @@
 # Проект «noLXP»
 
+## Первые шаги
+
+1. Создайте копию `.env.example` с именем `.env`. Задайте `PYTHON_ENVIRONMENT` равным `DEVELOPMENT`. Задайте `SECRET_KEY`, сгенерировав его через `openssl rand -hex 32` либо альтернативы.
+2. Создайте и активируйте виртуальное окружение
+3. Установите зависимости `pip install -r requirements.txt`
+4. Примените миграции пользовательской модели `python manage.py migrate accounts`
+5. Примените остальные миграции `python manage.py migrate`
+6. Запустите сервер `python manage.py runserver`
+7. Успехов!
+
 ## Описание
 
 Проект представляет собой срез части функционала lxp-платформы.
