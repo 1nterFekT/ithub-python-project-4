@@ -5,7 +5,7 @@ from django.contrib import messages
 def login_view(request):
     if request.user.is_authenticated:
         return redirect("courses")
-    
+
     if request.method == "POST":
         username = request.POST.get("username")
         password = request.POST.get("password")
@@ -15,7 +15,7 @@ def login_view(request):
         if user:
             login(request, user)
             return redirect("courses")
-        
+
         messages.error(request, "Неверный логин или пароль")
 
     return render(request, "accounts/login.html")
