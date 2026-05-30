@@ -1,0 +1,64 @@
+[
+    {
+        "model": "accounts.user",
+        "pk": 10,
+        "fields": {
+            "username": "teacher1",
+            "password": "teacher1password",
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "accounts.user",
+        "pk": 11,
+        "fields": {
+            "username": "teacher2",
+            "password": "teacher2password",
+            "is_staff": true,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "accounts.user",
+        "pk": 12,
+        "fields": {
+            "username": "manager1",
+            "password": "manager1password",
+            "is_staff": true,
+            "is_superuser": true
+        }
+    },
+
+    {
+        "model": "staff.teacher",
+        "pk": 1,
+        "fields": {
+            "first_name": "Иван",
+            "last_name": "Иванов",
+            "middle_name": "Иванович",
+            "account": 10
+        }
+    },
+    {
+        "model": "staff.teacher",
+        "pk": 2,
+        "fields": {
+            "first_name": "Николай",
+            "last_name": "Николаев",
+            "middle_name": "Николаевич",
+            "account": 11
+        }
+    },
+
+    {
+        "model": "staff.manager",
+        "pk": 1,
+        "fields": {
+            "first_name": "Александр",
+            "last_name": "Александров",
+            "middle_name": "Александрович",
+            "account": 12
+        }
+    }
+]

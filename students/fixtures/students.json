@@ -1,0 +1,75 @@
+[
+    {
+        "model": "accounts.user",
+        "pk": 1,
+        "fields": {
+            "username": "student1",
+            "password": "student1password",
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "accounts.user",
+        "pk": 2,
+        "fields": {
+            "username": "student2",
+            "password": "student2password",
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+    {
+        "model": "accounts.user",
+        "pk": 3,
+        "fields": {
+            "username": "student3",
+            "password": "student2password",
+            "is_staff": false,
+            "is_superuser": false
+        }
+    },
+
+    {
+        "model": "students.group",
+        "pk": 1,
+        "fields": {
+            "title": "ИТ-9.24.1",
+            "course": "2"
+        }
+    },
+
+    {
+        "model": "students.student",
+        "pk": 1,
+        "fields": {
+            "first_name": "Михаил",
+            "last_name": "Луковников",
+            "middle_name": "Александрович",
+            "account": 1,
+            "group": 1
+        }
+    },
+    {
+        "model": "students.student",
+        "pk": 2,
+        "fields": {
+            "first_name": "Кирилл",
+            "last_name": "Пак",
+            "middle_name": "Юрьевич",
+            "account": 2,
+            "group": 1
+        }
+    },
+    {
+        "model": "students.student",
+        "pk": 3,
+        "fields": {
+            "first_name": "Полина",
+            "last_name": "Шин",
+            "middle_name": "Николаевна",
+            "account": 3,
+            "group": 1
+        }
+    }
+]

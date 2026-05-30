@@ -1,0 +1,104 @@
+[
+    {
+        "model": "courses.discipline",
+        "pk": 1,
+        "fields": {
+            "title": "JavaScript DOM",
+            "duration": 30
+        }
+    },
+    {
+        "model": "courses.discipline",
+        "pk": 2,
+        "fields": {
+            "title": "Node.js",
+            "duration": 40
+        }
+    },
+    {
+        "model": "courses.discipline",
+        "pk": 3,
+        "fields": {
+            "title": "Python on Web",
+            "duration": 50
+        }
+    },
+
+    {
+        "model": "students.group",
+        "pk": 2,
+        "fields": {
+            "title": "ИТ-9.24.2",
+            "course": "2"
+        }
+    },
+
+    {
+        "model": "courses.course",
+        "pk": 1,
+        "fields": {
+            "code": "Prog-101",
+            "about": "JS DOM",
+            "discipline": 1,
+            "group": 1,
+            "teacher": 1
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 2,
+        "fields": {
+            "code": "Prog-102",
+            "about": "JS DOM",
+            "discipline": 1,
+            "group": 2,
+            "teacher": 2
+        }
+    },
+
+    {
+        "model": "courses.course",
+        "pk": 3,
+        "fields": {
+            "code": "NodeJS-101",
+            "about": "NodeJS",
+            "discipline": 2,
+            "group": 1,
+            "teacher": 1
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 4,
+        "fields": {
+            "code": "NodeJS-102",
+            "about": "NodeJS",
+            "discipline": 2,
+            "group": 2,
+            "teacher": 2
+        }
+    },
+
+    {
+        "model": "courses.course",
+        "pk": 5,
+        "fields": {
+            "code": "Python-101",
+            "about": "Python on Web",
+            "discipline": 3,
+            "group": 1,
+            "teacher": 1
+        }
+    },
+    {
+        "model": "courses.course",
+        "pk": 6,
+        "fields": {
+            "code": "Python-102",
+            "about": "Python on Web",
+            "discipline": 3,
+            "group": 2,
+            "teacher": 2
+        }
+    }
+]
