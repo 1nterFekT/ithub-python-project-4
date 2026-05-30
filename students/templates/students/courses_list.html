@@ -1,0 +1,8 @@
+<h2>Курсы</h2>
+
+{% for course in courses %}
+<div>
+    <a href="/courses/{{ course.id }}">{{ course.code }}</a>
+    - {{ course.about }}
+</div>
+{% endfor %}

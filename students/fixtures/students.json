@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "username": "student1",
-            "password": "student1password",
+            "password": "pbkdf2_sha256$260000$demo$demo",
             "is_staff": false,
             "is_superuser": false
         }
@@ -14,7 +14,7 @@
         "pk": 2,
         "fields": {
             "username": "student2",
-            "password": "student2password",
+            "password": "pbkdf2_sha256$260000$demo$demo",
             "is_staff": false,
             "is_superuser": false
         }
@@ -24,7 +24,7 @@
         "pk": 3,
         "fields": {
             "username": "student3",
-            "password": "student2password",
+            "password": "pbkdf2_sha256$260000$demo$demo",
             "is_staff": false,
             "is_superuser": false
         }

@@ -1,0 +1,12 @@
+<h2>Логин</h2>
+
+{% for message in messages %}
+<p style="color: red">{{ message }}</p>
+{% endfor %}
+
+<form method="post">
+    {% csrf_token %}
+    <input name="username" placeholder="username" />
+    <input type="password" name="password" placeholder="password" />
+    <button type="submit">Логин</button>
+</form>
