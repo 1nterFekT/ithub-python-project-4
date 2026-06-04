@@ -41,7 +41,9 @@
             "about": "JS DOM",
             "discipline": 1,
             "group": 1,
-            "teacher": 1
+            "teacher": 1,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
     {
@@ -52,7 +54,9 @@
             "about": "JS DOM",
             "discipline": 1,
             "group": 2,
-            "teacher": 2
+            "teacher": 2,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
 
@@ -64,7 +68,9 @@
             "about": "NodeJS",
             "discipline": 2,
             "group": 1,
-            "teacher": 1
+            "teacher": 1,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
     {
@@ -75,7 +81,9 @@
             "about": "NodeJS",
             "discipline": 2,
             "group": 2,
-            "teacher": 2
+            "teacher": 2,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
 
@@ -87,7 +95,9 @@
             "about": "Python on Web",
             "discipline": 3,
             "group": 1,
-            "teacher": 1
+            "teacher": 1,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
     {
@@ -98,7 +108,9 @@
             "about": "Python on Web",
             "discipline": 3,
             "group": 2,
-            "teacher": 2
+            "teacher": 2,
+            "course_start": "2026-01-10",
+            "course_end": "2026-06-05"
         }
     },
     {
