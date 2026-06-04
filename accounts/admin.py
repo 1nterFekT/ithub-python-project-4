@@ -19,7 +19,23 @@ class UserAdmin(BaseUserAdmin, ModelAdmin):
 
     list_display = ['username', 'is_staff']
     list_filter = ['is_staff']
+
     search_fields = ['username']
+
+    fieldsets = (
+        (None, {'fields': ('username', 'password')}),
+        ('Права доступа', {
+            'fields': ('is_staff', 'is_superuser', 'groups', 'user_permissions')
+        }),
+        ('Важные даты', {'fields': ('last_login',)})
+    )
+
+    add_fieldsets = (
+        (None, {
+            'classes': ('wide',),
+            'fields': ('username', 'password1', 'password2', 'is_staff', 'is_superuser', 'groups')
+        }),
+    )
 
 
 @admin.register(Group)
