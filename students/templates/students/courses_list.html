@@ -1,8 +1,10 @@
 <h2>Курсы</h2>
 
-{% for course in courses %}
+{% for item in courses %}
 <div>
-    <a href="/courses/{{ course.id }}">{{ course.code }}</a>
-    - {{ course.about }}
+    <a href="/courses/{{ item.course.id }}"> {{ item.course.code }} </a>
+    - {{ item.course.about }}
+
+    <div>Баллы: {{ item.score }} / {{ item.max_score }}</div>
 </div>
 {% endfor %}

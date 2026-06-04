@@ -1,8 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
+from django.db.models import Sum
 
 from courses.models import Course
+from assignments.models import Submission
 
 def get_student_or_none(user):
     return getattr(user, "student", None)
@@ -16,8 +18,24 @@ def courses_list(request):
 
     courses = Course.objects.filter(group=student.group)
 
+    enriched_courses = []
+
+    for course in courses:
+        submissions = Submission.objects.filter(
+            student=student,
+            assignment__topic__discipline=course.discipline
+        )
+
+        total_score = submissions.aggregate(total=Sum("score"))["total"] or 0
+
+        enriched_courses.append({
+            "course": course,
+            "score": total_score,
+            "max_score": 100
+        })
+
     return render(request, "students/courses_list.html", {
-        "courses": courses
+        "courses": enriched_courses
     })
 
 @login_required(login_url="login")
