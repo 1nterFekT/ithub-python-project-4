@@ -22,3 +22,4 @@ class StudentAdmin(admin.ModelAdmin):
 class GroupAdmin(admin.ModelAdmin):
     list_display = ("title", "course")
     list_filter = ("course",)
+    search_fields = ("title",)
