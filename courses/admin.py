@@ -1,5 +1,5 @@
 from django.contrib import admin
-from courses.models import Discipline, Course
+from courses.models import Discipline, Course, Topic
 
 @admin.register(Discipline)
 class DisciplineAdmin(admin.ModelAdmin):
@@ -50,3 +50,14 @@ class CourseAdmin(admin.ModelAdmin):
             return qs.filter(teacher__acount=request.user)
         
         return qs
+    
+@admin.register(Topic)
+class TopicAdmin(admin.ModelAdmin):
+    list_display = (
+        "ordering_number",
+        "title",
+        "discipline"
+    )
+
+    list_filter = ("discipline",)
+    search_fields = ("title",)
