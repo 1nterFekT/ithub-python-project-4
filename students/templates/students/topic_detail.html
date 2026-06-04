@@ -1,0 +1,29 @@
+<h2>{{ topic.ordering_number }}. {{ topic.title }}</h2>
+
+<p>{{ topic.content }}</p>
+<p>Часы: {{ topic.duration }}</p>
+
+<hr>
+
+{% if assignment %}
+    <h3>Контрольная точка</h3>
+
+    {% if submission %}
+        {% if submission.score and submission.score > 0 %}
+            <div style="color: green;">
+                Баллы: {{ submission.score }} / {{ assignment.weight }}
+            </div>
+        {% else %}
+            <div style="color: orange;">
+                На проверке
+            </div>
+        {% endif %}
+    {% else %}
+            <form method="post">
+                {% csrf_token %}
+                <textarea name="answer" rows="5" cols="50" placeholder="Ответ"></textarea>
+                <br>
+                <button type="submit">Отправить на проверку</button>
+            </form>
+    {% endif %}
+{% endif %}
