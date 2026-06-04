@@ -100,5 +100,72 @@
             "group": 2,
             "teacher": 2
         }
+    },
+    {
+        "model": "courses.topic",
+        "pk": 1,
+        "fields": {
+            "ordering_number": 1,
+            "title": "Объектная модель браузера (BOM)",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 1
+        }
+    },
+    {
+        "model": "courses.topic",
+        "pk": 2,
+        "fields": {
+            "ordering_number": 2,
+            "title": "Свойства объекта Window",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 1
+        }
+    },
+    {
+        "model": "courses.topic",
+        "pk": 3,
+        "fields": {
+            "ordering_number": 3,
+            "title": "Методы объекта Window",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 1
+        }
+    },
+
+    {
+        "model": "courses.topic",
+        "pk": 4,
+        "fields": {
+            "ordering_number": 1,
+            "title": "Установка Node.js. REPL",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 2
+        }
+    },
+    {
+        "model": "courses.topic",
+        "pk": 5,
+        "fields": {
+            "ordering_number": 2,
+            "title": "Модули. Глобальные объекты",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 2
+        }
+    },
+    {
+        "model": "courses.topic",
+        "pk": 6,
+        "fields": {
+            "ordering_number": 3,
+            "title": "NPM. Package.json. Работа с пакетами",
+            "content": "Тут текст темы",
+            "duration": 2,
+            "discipline": 2
+        }
     }
 ]

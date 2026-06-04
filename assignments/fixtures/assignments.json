@@ -1,0 +1,72 @@
+[
+    {
+        "model": "assignments.assignment",
+        "pk": 1,
+        "fields": {
+            "topic": 3,
+            "weight": 20,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "assignments.assignment",
+        "pk": 2,
+        "fields": {
+            "topic": 6,
+            "weight": 6,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    },
+
+    {
+        "model": "assignments.submission",
+        "pk": 1,
+        "fields": {
+            "student": 1,
+            "assignment": 1,
+            "answer": "Ответ 1",
+            "score": 15,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "assignments.submission",
+        "pk": 2,
+        "fields": {
+            "student": 2,
+            "assignment": 1,
+            "answer": "Ответ 2",
+            "score": 20,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    },
+
+    {
+        "model": "assignments.submission",
+        "pk": 3,
+        "fields": {
+            "student": 1,
+            "assignment": 2,
+            "answer": "Ответ 3",
+            "score": 5,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    },
+    {
+        "model": "assignments.submission",
+        "pk": 4,
+        "fields": {
+            "student": 3,
+            "assignment": 2,
+            "answer": "Ответ 4",
+            "score": 6,
+            "created_at": "2026-01-01T12:00:00Z",
+            "updated_at": "2026-01-01T12:00:00Z"
+        }
+    }
+]
