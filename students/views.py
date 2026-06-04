@@ -4,7 +4,7 @@ from django.http import HttpResponseForbidden
 from django.db.models import Sum
 
 from courses.models import Course
-from assignments.models import Submission
+from assignments.models import Submission, Assignment
 
 def get_student_or_none(user):
     return getattr(user, "student", None)
@@ -51,6 +51,30 @@ def course_detail(request, course_id):
         group=student.group
     )
 
+    topics = course.discipline.topics.all().order_by("ordering_number")
+
+    submissions = Submission.objects.filter(
+        student=student,
+        assignment__topic__discipline=course.discipline
+    )
+
+    submission_map = {
+        s.assignment.topic_id: s for s in submissions
+    }
+
+    topics_data = []
+
+    for topic in topics:
+        assignment = getattr(topic, "assignment", None)
+        submission = submission_map.get(topic.id)
+
+        topics_data.append({
+            "topic": topic,
+            "assignment": assignment,
+            "submission": submission
+        })
+
     return render(request, "students/course_detail.html", {
-        "course": course
+        "course": course,
+        "topics": topics_data
     })

@@ -2,3 +2,25 @@
 
 <p>{{ course.about }}</p>
 <p>Дисциплина: {{ course.discipline.title }}</p>
+
+<hr />
+
+<h3>Темы</h3>
+
+{% for item in topics %}
+<div style="margin-bottom: 10px">
+    <div>
+        <a href="#">{{ item.topic.ordering_number }}. {{ item.topic.title }}</a>
+        ({{ item.topic.duration }} ч)
+    </div>
+
+    {% if item.assignment %}
+    <div>Контрольная точка</div>
+
+    {% if item.submission %}
+    <div>Баллы: {{ item.submission.score }} / {{ item.assignment.weight }}</div>
+    {% else %}
+    <div style="color: gray">Не сдано</div>
+    {% endif %} {% endif %}
+</div>
+{% endfor %}
