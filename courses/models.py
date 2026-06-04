@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models import UniqueConstraint
 from students.models import Group
 
 class Discipline(models.Model):
@@ -107,3 +108,44 @@ class Course(models.Model):
 
     def __str__(self):
         return self.code
+    
+class Topic(models.Model):
+    ordering_number = models.PositiveIntegerField(
+        verbose_name='Порядковый номер'
+    )
+
+    title = models.CharField(
+        max_length=50,
+        verbose_name='Название темы'
+    )
+
+    content = models.TextField(
+        verbose_name='Содержимое'
+    )
+
+    duration = models.PositiveIntegerField(
+        verbose_name='Количество часов'
+    )
+
+    discipline = models.ForeignKey(
+        Discipline,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name='topics',
+        verbose_name='Дисциплина'
+    )
+
+    class Meta:
+        verbose_name = 'Учебная тема'
+        verbose_name_plural = 'Учебные темы'
+        ordering = ['discipline', 'ordering_number']
+        constraints = [
+            UniqueConstraint(
+                fields=['ordering_number', 'discipline'],
+                name='unique_topic_ordering_per_discipline'
+            )
+        ]
+
+    def __str__(self):
+        return f'{self.ordering_number}. {self.title}'
