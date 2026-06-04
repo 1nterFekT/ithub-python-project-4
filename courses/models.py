@@ -111,7 +111,7 @@ class Course(models.Model):
     
 class Topic(models.Model):
     ordering_number = models.PositiveIntegerField(
-        verbose_name='Порядковый номер'
+        verbose_name='Код учебной темы'
     )
 
     title = models.CharField(

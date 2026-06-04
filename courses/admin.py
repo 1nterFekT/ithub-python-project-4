@@ -1,8 +1,10 @@
 from django.contrib import admin
 from courses.models import Discipline, Course, Topic
 
+from unfold.admin import ModelAdmin
+
 @admin.register(Discipline)
-class DisciplineAdmin(admin.ModelAdmin):
+class DisciplineAdmin(ModelAdmin):
     list_display = (
         "title",
         "duration",
@@ -14,7 +16,7 @@ class DisciplineAdmin(admin.ModelAdmin):
     search_fields = ("title",)
 
 @admin.register(Course)
-class CourseAdmin(admin.ModelAdmin):
+class CourseAdmin(ModelAdmin):
     list_display = (
         "code",
         "discipline_title",
@@ -52,7 +54,7 @@ class CourseAdmin(admin.ModelAdmin):
         return qs
     
 @admin.register(Topic)
-class TopicAdmin(admin.ModelAdmin):
+class TopicAdmin(ModelAdmin):
     list_display = (
         "ordering_number",
         "title",

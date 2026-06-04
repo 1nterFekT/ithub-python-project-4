@@ -1,8 +1,10 @@
 from django.contrib import admin
 from staff.models import Teacher
 
+from unfold.admin import ModelAdmin
+
 @admin.register(Teacher)
-class TeacherAdmin(admin.ModelAdmin):
+class TeacherAdmin(ModelAdmin):
     list_display = ("last_name", "initials", "account")
     search_fields = ("last_name",)
 

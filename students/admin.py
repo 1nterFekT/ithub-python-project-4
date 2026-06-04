@@ -1,8 +1,10 @@
 from django.contrib import admin
 from students.models import Student, Group
 
+from unfold.admin import ModelAdmin
+
 @admin.register(Student)
-class StudentAdmin(admin.ModelAdmin):
+class StudentAdmin(ModelAdmin):
     list_display = (
         "last_name",
         "initials",
@@ -19,7 +21,7 @@ class StudentAdmin(admin.ModelAdmin):
     initials.short_description = "Инициалы"
 
 @admin.register(Group)
-class GroupAdmin(admin.ModelAdmin):
+class GroupAdmin(ModelAdmin):
     list_display = ("title", "course")
     list_filter = ("course",)
     search_fields = ("title",)

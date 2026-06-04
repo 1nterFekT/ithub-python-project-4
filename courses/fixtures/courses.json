@@ -151,7 +151,7 @@
         "model": "courses.topic",
         "pk": 4,
         "fields": {
-            "ordering_number": 1,
+            "ordering_number": 4,
             "title": "Установка Node.js. REPL",
             "content": "Тут текст темы",
             "duration": 2,
@@ -162,7 +162,7 @@
         "model": "courses.topic",
         "pk": 5,
         "fields": {
-            "ordering_number": 2,
+            "ordering_number": 5,
             "title": "Модули. Глобальные объекты",
             "content": "Тут текст темы",
             "duration": 2,
@@ -173,7 +173,7 @@
         "model": "courses.topic",
         "pk": 6,
         "fields": {
-            "ordering_number": 3,
+            "ordering_number": 6,
             "title": "NPM. Package.json. Работа с пакетами",
             "content": "Тут текст темы",
             "duration": 2,
